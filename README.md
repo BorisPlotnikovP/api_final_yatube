@@ -1,8 +1,3 @@
-# api_final
-Добавим примеры ответов на запросы в `README.md`. Используя предоставленную информацию, я добавлю примеры ответов для каждого типа запроса.
-
----
-
 # YatubeApi
 
 ## Основные возможности
@@ -22,8 +17,9 @@
    pip install -r requirements.txt
    ```
 
-3. Примените миграции:
+3. Создайте и примените миграции:
    ```bash
+   python manage.py makemigrations
    python manage.py migrate
    ```
 
