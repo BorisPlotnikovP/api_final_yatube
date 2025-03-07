@@ -1,4 +1,4 @@
-from rest_framework.viewsets import mixins, GenericViewSet
+from rest_framework.viewsets import mixins, GenericViewSet, ModelViewSet
 
 from .permissions import AuthorOrReadOnly, ReadOnly
 
@@ -15,8 +15,7 @@ class ListRetrieveViewSet(mixins.RetrieveModelMixin, mixins.ListModelMixin,
 
 
 # Класс для наследования базовой настройки прав доступа.
-class DefaultPermissionMixin():
-
+class DefaultPermissionMixin(ModelViewSet):
     permission_classes = (AuthorOrReadOnly,)
 
     def get_permissions(self):
